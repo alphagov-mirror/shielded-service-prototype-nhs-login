@@ -84,134 +84,134 @@ const request = require('request');
 
 router.post('/set-up/v5-b/what-you-need', function (req, res) {
 
-  // Make a variable and give it the value from 'signIn'
-  var signIn = req.session.data['signIn']
+    // Make a variable and give it the value from 'signIn'
+    var signIn = req.session.data['signIn']
 
-  // Check whether the variable matches a condition
-  if (signIn == "true") {
-    // Send user to next page
-    res.redirect('login-enter-password')
-  } else {
-    // Send user to ineligible page
-    res.redirect('register-create-password')
-  }
+    // Check whether the variable matches a condition
+    if (signIn == "true") {
+        // Send user to next page
+        res.redirect('login-enter-password')
+    } else {
+        // Send user to ineligible page
+        res.redirect('register-create-password')
+    }
 })
 
 router.post('/set-up/v5-a/enter-email', function (req, res) {
 
-  // Make a variable and give it the value from 'signIn'
-  var signIn = req.session.data['signIn']
+    // Make a variable and give it the value from 'signIn'
+    var signIn = req.session.data['signIn']
 
-  // Check whether the variable matches a condition
-  if (signIn == "true") {
-    // Send user to next page
-    res.redirect('login-enter-password')
-  } else {
-    // Send user to ineligible page
-    res.redirect('register-create-password')
-  }
+    // Check whether the variable matches a condition
+    if (signIn == "true") {
+        // Send user to next page
+        res.redirect('login-enter-password')
+    } else {
+        // Send user to ineligible page
+        res.redirect('register-create-password')
+    }
 })
 
 router.post('/p5/sensely-sign-in', function (req, res) {
 
-  // Make a variable and give it the value from 'signIn'
-  var optionB = req.session.data['optionB']
+    // Make a variable and give it the value from 'signIn'
+    var optionB = req.session.data['optionB']
 
-  // Check whether the variable matches a condition
-  if (optionB == "true") {
-    // Send user to next page
-    res.redirect('/set-up/v5-b/enter-email')
-  } else {
-    // Send user to ineligible page
-    res.redirect('/set-up/v5-a/enter-email')
-  }
+    // Check whether the variable matches a condition
+    if (optionB == "true") {
+        // Send user to next page
+        res.redirect('/set-up/v5-b/enter-email')
+    } else {
+        // Send user to ineligible page
+        res.redirect('/set-up/v5-a/enter-email')
+    }
 })
 
 // routing for know NHS number
 
-router.post('/p5/know-nhs-number', function (req, res) {
+router.post('/uj1/know-nhs-number-answer', function (req, res) {
 
-  // Make a variable and give it the value from 'know-nhs-number'
-  var nhsNumber = req.session.data['know-nhs-number']
+    // Make a variable and give it the value from 'know-nhs-number'
+    var nhsNumber = req.session.data['know-nhs-number']
 
-  // Check whether the variable matches a condition
-  if (nhsNumber == "Yes") {
-    // Send user to next page
-    res.redirect('/p5/enter-nhs-number')
-  } else {
-    // Send user to ineligible page
-    res.redirect('/p5/enter-name')
-  }
+    // Check whether the variable matches a condition
+    if (nhsNumber == "Yes") {
+        // Send user to next page
+        res.redirect('/uj1/enter-nhs-number')
+    } else {
+        // Send user to ineligible page
+        res.redirect('/uj1/enter-name')
+    }
 })
 
 // vsps-reg-p5-plugin routung for Know your NHS number
 
 router.post('/p5/vsps-reg-p5-plugin/know-nhs-number', function (req, res) {
 
-  // Make a variable and give it the value from 'know-nhs-number'
-  var nhsNumber = req.session.data['know-nhs-number']
+    // Make a variable and give it the value from 'know-nhs-number'
+    var nhsNumber = req.session.data['know-nhs-number']
 
-  // Check whether the variable matches a condition
-  if (nhsNumber == "Yes") {
-    // Send user to next page
-    res.redirect('/p5/vsps-reg-p5-plugin/enter-nhs-number')
-  } else {
-    // Send user to ineligible page
-    res.redirect('/p5/vsps-reg-p5-plugin/enter-name')
-  }
+    // Check whether the variable matches a condition
+    if (nhsNumber == "Yes") {
+        // Send user to next page
+        res.redirect('/p5/vsps-reg-p5-plugin/enter-nhs-number')
+    } else {
+        // Send user to ineligible page
+        res.redirect('/p5/vsps-reg-p5-plugin/enter-name')
+    }
 })
 
 //../../p5/to-auth-consent/enter-nhs-number
 
 router.post('/p5/demo/know-nhs-number', function (req, res) {
 
-  // Make a variable and give it the value from 'know-nhs-number'
-  var nhsNumber = req.session.data['know-nhs-number']
+    // Make a variable and give it the value from 'know-nhs-number'
+    var nhsNumber = req.session.data['know-nhs-number']
 
-  // Check whether the variable matches a condition
-  if (nhsNumber == "Yes") {
-    // Send user to next page
-    res.redirect('/p5/demo/enter-nhs-number')
-  } else {
-    // Send user to ineligible page
-    res.redirect('/p5/demo/enter-name')
-  }
+    // Check whether the variable matches a condition
+    if (nhsNumber == "Yes") {
+        // Send user to next page
+        res.redirect('/p5/demo/enter-nhs-number')
+    } else {
+        // Send user to ineligible page
+        res.redirect('/p5/demo/enter-name')
+    }
 })
 
 router.post('/p5/errors/error-radio-no-input', function (req, res) {
 
-  // Make a variable and give it the value from 'know-nhs-number'
-  var nhsNumber = req.session.data['know-nhs-number']
+    // Make a variable and give it the value from 'know-nhs-number'
+    var nhsNumber = req.session.data['know-nhs-number']
 
-  // Check whether the variable matches the following condition
-  if (nhsNumber == "Yes") {
-    // Redirect user to this page
-    res.redirect('/p5/demo/enter-nhs-number')
-  } else {
-    // Redirect user to this page
-    res.redirect('/p5/demo/enter-name')
-  }
+    // Check whether the variable matches the following condition
+    if (nhsNumber == "Yes") {
+        // Redirect user to this page
+        res.redirect('/p5/demo/enter-nhs-number')
+    } else {
+        // Redirect user to this page
+        res.redirect('/p5/demo/enter-name')
+    }
 })
 
 router.get('/help/prototypes', function (req, res) {
-  let commitDate = {};
-  request('https://api.github.com/repos/wshepworth/nhs-login/commits/master', {
-    json: true,
-    headers: {
-      'User-Agent': 'wshepworth'
-    }
-  }, (err, res, body) => {
-    if (err) {
-      console.error(err);
-    }
-    commitDate = body.commit.author.date;
-    console.log(commitDate);
+    let commitDate = {};
+    request('https://api.github.com/repos/wshepworth/nhs-login/commits/master', {
+        json: true,
+        headers: {
+            'User-Agent': 'wshepworth'
+        }
+    }, (err, res, body) => {
+        if (err) {
+            console.error(err);
+        }
+        commitDate = body.commit.author.date;
+        console.log(commitDate);
 
-  });
-  console.log(commitDate);
-  return res.render('help/prototypes', {
-    'commitDate': commitDate
-  });
+    });
+    console.log(commitDate);
+    return res.render('help/prototypes', {
+        'commitDate': commitDate
+    });
 })
 
 module.exports = router;
@@ -219,20 +219,20 @@ module.exports = router;
 // Dev Mode
 
 function devModeRoute(req, res, next) {
-  if (!req.session.data['devMode']) {
-    console.log('no data found');
-    var devMode = req.query.devMode;
-    if (devMode === 'true') {
-      console.log('devmode detected');
-      req.session.data['devMode'] = 'true'
-      console.log('local storage updated');
+    if (!req.session.data['devMode']) {
+        console.log('no data found');
+        var devMode = req.query.devMode;
+        if (devMode === 'true') {
+            console.log('devmode detected');
+            req.session.data['devMode'] = 'true'
+            console.log('local storage updated');
+        } else {
+            console.log('devmode not detected');
+        }
     } else {
-      console.log('devmode not detected');
+        console.log('data found and set to ' + req.session.data['devMode'])
     }
-  } else {
-    console.log('data found and set to ' + req.session.data['devMode'])
-  }
-  next()
+    next()
 }
 
 router.get("/*", devModeRoute);
@@ -241,6 +241,6 @@ router.get("/", devModeRoute);
 
 // Clear all session data
 router.get('/clear-data', (req, res) => {
-  req.session.data = {}
-  res.redirect('/index')
+    req.session.data = {}
+    res.redirect('/index')
 })
