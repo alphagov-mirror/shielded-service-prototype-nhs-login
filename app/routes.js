@@ -159,6 +159,37 @@ router.post('/uj2/know-nhs-number-answer', function (req, res) {
     }
 })
 
+router.post('/uj3/know-nhs-number-answer', function (req, res) {
+
+    // Make a variable and give it the value from 'know-nhs-number'
+    var nhsNumber = req.session.data['know-nhs-number']
+
+    // Check whether the variable matches a condition
+    if (nhsNumber == "Yes") {
+        // Send user to next page
+        res.redirect('/uj3/enter-nhs-number')
+    } else {
+        // Send user to ineligible page
+        res.redirect('/uj3/enter-name')
+    }
+})
+
+
+router.post('/uj3/login-enter-password-check', function (req, res) {
+
+    // Make a variable and give it the value from 'know-nhs-number'
+    var userEmail = req.session.data['userEmail']
+
+    // Check whether the variable matches a condition
+    if (userEmail == "Existing") {
+        // Send user to next page
+        res.redirect('/uj3/login-enter-password')
+    } else {
+        // Send user to ineligible page
+        res.redirect('/uj3/register-create-password')
+    }
+})
+
 // vsps-reg-p5-plugin routung for Know your NHS number
 
 router.post('/p5/vsps-reg-p5-plugin/know-nhs-number', function (req, res) {
