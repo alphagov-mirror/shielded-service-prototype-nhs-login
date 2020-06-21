@@ -20,7 +20,7 @@ What is your date of birth?
 
         <div class="nhsuk-u-padding-bottom-3"></div>
 
-        <form method="submit">
+        <form action="which-auth" method="post">
             <div class="nhsuk-form-group">
                 <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
                     <legend class="nhsuk-fieldset__legend nhsuk-label--l">
@@ -62,7 +62,7 @@ What is your date of birth?
             </div>
 
             {% if data['know-nhs-number'] == "Yes" %}
-            <a class="nhsuk-button full-width" href="auth">
+            <a class="nhsuk-button full-width" href="auth-2">
                 Submit information
             </a>
             {% else %}
