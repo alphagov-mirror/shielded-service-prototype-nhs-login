@@ -181,7 +181,7 @@ router.post('/uj3/login-enter-password-check', function (req, res) {
     var userEmail = req.session.data['userEmail']
 
     // Check whether the variable matches a condition
-    if (userEmail == "Existing") {
+    if (userEmail == "Existing@com") {
         // Send user to next page
         res.redirect('/uj3/login-enter-password')
     } else {
