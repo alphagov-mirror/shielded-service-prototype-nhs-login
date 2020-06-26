@@ -138,11 +138,11 @@ if (!sessionDataDefaultsFileExists) {
         .pipe(fs.createWriteStream(sessionDataDefaultsFile))
 }
 
-// Check if the app is documentation only
+/* Check if the app is documentation only
 if (onlyDocumentation !== 'true') {
     // Require authentication if not
     app.use(authentication);
-}
+} */
 
 // Local variables
 app.use(locals(config));
@@ -157,13 +157,13 @@ app.use('/nhsuk-frontend', express.static(path.join(__dirname, 'node_modules/nhs
 app.use('/nhsuk-frontend', express.static(path.join(__dirname, 'node_modules/nhsuk-frontend/dist')));
 
 
-/* Check if the app is documentation only
-if(onlyDocumentation == 'true') {
-  app.get('/', function(req, res) {
-    // Redirect to the documentation pages if it is
-    res.redirect('/docs');
-  });
-} */
+// Check if the app is documentation only
+if (onlyDocumentation == 'true') {
+    app.get('/', function (req, res) {
+        // Redirect to the documentation pages if it is
+        res.redirect('/docs');
+    });
+}
 
 // Use custom application routes
 app.use('/', routes);
