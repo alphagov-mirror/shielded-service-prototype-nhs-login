@@ -138,7 +138,7 @@ if (!sessionDataDefaultsFileExists) {
         .pipe(fs.createWriteStream(sessionDataDefaultsFile))
 }
 
-/* Check if the app is documentation only
+/* Check if the app is documentation only - turned off
 if (onlyDocumentation !== 'true') {
     // Require authentication if not
     app.use(authentication);
