@@ -208,6 +208,55 @@ router.post('/uj3/which-auth', function (req, res) {
 })
 
 
+router.post('/uj4/know-nhs-number-answer', function (req, res) {
+
+    // Make a variable and give it the value from 'know-nhs-number'
+    var nhsNumber = req.session.data['know-nhs-number']
+
+    // Check whether the variable matches a condition
+    if (nhsNumber == "Yes") {
+        // Send user to next page
+        res.redirect('/uj4/enter-nhs-number')
+    } else {
+        // Send user to ineligible page
+        res.redirect('/uj4/enter-name')
+    }
+})
+
+
+router.post('/uj4/login-enter-password-check', function (req, res) {
+
+    // Make a variable and give it the value from 'know-nhs-number'
+    var userEmail = req.session.data['userEmail']
+
+    // Check whether the variable matches a condition
+    if (userEmail == "Existing@com") {
+        // Send user to next page
+        res.redirect('/uj4/login-enter-password')
+    } else {
+        // Send user to ineligible page
+        res.redirect('/uj4/register-create-password')
+    }
+})
+
+
+
+router.post('/uj4/which-auth', function (req, res) {
+
+    // Make a variable and give it the value from 'know-nhs-number'
+    var userEmail = req.session.data['userEmail']
+
+    // Check whether the variable matches a condition
+    if (userEmail == "Existing@com") {
+        // Send user to next page
+        res.redirect('/uj4/auth')
+    } else {
+        // Send user to ineligible page
+        res.redirect('/uj4/auth-2')
+    }
+})
+
+
 
 // vsps-reg-p5-plugin routung for Know your NHS number
 
