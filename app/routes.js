@@ -295,12 +295,12 @@ router.post('/uj5/which-auth', function (req, res) {
     var userEmail = req.session.data['userEmail']
 
     // Check whether the variable matches a condition
-    if (userEmail == "Existing@com") {
+    if (userEmail == "newuser@com") {
         // Send user to next page
-        res.redirect('/uj5/auth')
+        res.redirect('/uj5/aut-3')
     } else {
         // Send user to ineligible page
-        res.redirect('/uj5/auth-3')
+        res.redirect('/uj5/auth')
     }
 })
 
