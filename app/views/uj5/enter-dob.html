@@ -61,10 +61,12 @@ What is your date of birth?
                 </fieldset>
             </div>
 
+
+
             {% if data['know-nhs-number'] == "Yes" %}
-            <a class="nhsuk-button full-width" href="auth-3">
+            <button class="nhsuk-button full-width" type="submit">
                 Submit information
-            </a>
+            </button>
             {% else %}
             <a class="nhsuk-button full-width" href="enter-postcode">
                 Continue
