@@ -278,7 +278,7 @@ router.post('/uj5/login-enter-password-check', function (req, res) {
     var userEmail = req.session.data['userEmail']
 
     // Check whether the variable matches a condition
-    if (userEmail == "Existing@com" || userEmail == "login@com") {
+    if (userEmail == "existing@com" || userEmail == "login@com") {
         // Send user to next page
         res.redirect('/uj5/login-enter-password')
     } else {
@@ -295,7 +295,7 @@ router.post('/uj5/which-auth', function (req, res) {
     var userEmail = req.session.data['userEmail']
 
     // Check whether the variable matches a condition
-    if (userEmail == "newuser@com") {
+    if (userEmail == "new@com") {
         // Send user to next page
         res.redirect('/uj5/auth-3')
     } else {
