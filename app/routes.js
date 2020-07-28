@@ -127,7 +127,7 @@ router.post('/p5/sensely-sign-in', function (req, res) {
     }
 })
 
-// routing for know NHS number
+// UJ-1 PROTOTYPE
 
 router.post('/uj1/know-nhs-number-answer', function (req, res) {
 
@@ -144,6 +144,8 @@ router.post('/uj1/know-nhs-number-answer', function (req, res) {
     }
 })
 
+// UJ-2 PROTOTYPE
+
 router.post('/uj2/know-nhs-number-answer', function (req, res) {
 
     // Make a variable and give it the value from 'know-nhs-number'
@@ -158,6 +160,8 @@ router.post('/uj2/know-nhs-number-answer', function (req, res) {
         res.redirect('/uj2/enter-name')
     }
 })
+
+// UJ-3 PROTOTYPE
 
 router.post('/uj3/know-nhs-number-answer', function (req, res) {
 
@@ -207,6 +211,7 @@ router.post('/uj3/which-auth', function (req, res) {
     }
 })
 
+// UJ-4 PROTOTYPE
 
 router.post('/uj4/know-nhs-number-answer', function (req, res) {
 
@@ -255,6 +260,8 @@ router.post('/uj4/which-auth', function (req, res) {
         res.redirect('/uj4/auth-2')
     }
 })
+
+// UJ-5 PROTOTYPE
 
 router.post('/uj5/know-nhs-number-answer', function (req, res) {
 
