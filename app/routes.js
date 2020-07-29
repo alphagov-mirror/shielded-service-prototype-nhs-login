@@ -307,7 +307,7 @@ router.post('/uj5/which-auth', function (req, res) {
         res.redirect('/uj5/auth-3')
     } else {
         // Send user to ineligible page
-        res.redirect('/uj5/auth')
+        res.redirect('/uj5/auth-2')
     }
 })
 
